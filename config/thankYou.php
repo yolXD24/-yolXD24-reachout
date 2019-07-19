@@ -142,7 +142,7 @@
                         <p class="lead"><strong>You've done a great job.</strong></p>
                         <hr>
                         <p class="lead">
-                            <a class="btn btn-warning btn-sm" href="homepageUser.php" role="button">Continue to homepage</a>
+                            <a class="btn btn-warning btn-sm" href="https://yol24.herokuapp.com/" role="button">Continue to homepage</a>
                         </p>
                         <p>
                             Having trouble? <a href="">Contact us</a>
