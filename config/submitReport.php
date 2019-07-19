@@ -64,7 +64,7 @@
     }
 
     if(insertReport($name,$datenow,$ipId,findBrgy($location),$subject,$description)  ) {
-       header('Location:http://10.0.2.1/Students/leonilojrtorres/reachout/thankYou.php');
+       header('Location:https://yol24.herokuapp.com/thankYou.php');
     }
 
     
