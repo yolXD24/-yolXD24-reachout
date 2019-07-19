@@ -1,7 +1,7 @@
 <?php
-define('DB_SERVER', 'localhost');
-define('DB_USERNAME', 'root');
-define('DB_PASSWORD', 'pnpassword');
+define('DB_SERVER', 'remotemysql.com');
+define('DB_USERNAME', 'xVMI2W19dq');
+define('DB_PASSWORD', 'HT6LyFpIV8');
 define('DB_NAME', 'hackathonV2');
  
 /* Attempt to connect to MySQL database */
