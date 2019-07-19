@@ -1,4 +1,5 @@
 <?php
+ini_set('display_errors',1);
 define('DB_SERVER', 'remotemysql.com');
 define('DB_USERNAME', 'xVMI2W19dq');
 define('DB_PASSWORD', '');
