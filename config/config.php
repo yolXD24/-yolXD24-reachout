@@ -2,7 +2,7 @@
 define('DB_SERVER', 'remotemysql.com');
 define('DB_USERNAME', 'xVMI2W19dq');
 define('DB_PASSWORD', '');
-define('DB_NAME', 'hackathonV2');
+define('DB_NAME', 'xVMI2W19dq');
  
 /* Attempt to connect to MySQL database */
 $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
