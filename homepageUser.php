@@ -284,7 +284,7 @@
                     <h3 class="modal-title">Terms and Conditions</h3>
                 </div>
                 <div class="modal-body">
-                    <p>Welcome to our website. If you continue to browse and use this website, you are agreeing to
+                    <p>Hi there! If you continue to browse and use this website, you are agreeing to
                         comply with and be bound by the following terms and conditions of use. The term 'you' refers to
                         the user of our
                         website.
@@ -316,7 +316,7 @@
                 <hr class="rgba-white-light">
                 <div class="row d-flex text-center justify-content-center mb-sm-0 ">
                     <div class="col-sm-8">
-                        <p> <strong>About Us</strong><br>We are a concern citizen that would like to save those
+                        <p> <strong>About Us<br></strong><br>We are a concern citizen that would like to save those
                             valuable individual who are put in the mud of difficulties and economically challenge.</p>
                         Having trouble? <a href="index1.php">Contact us </a>
                     </div>
@@ -343,19 +343,6 @@
                 interval: 3000,
                 cycle: true
             });
-
-
-            $('.terms').click(function () {
-                swal({
-                    title: 'Terms and Condition',
-                    text: "Do you agree to the terms and Condition?",
-                    icon: "warning",
-                    buttons: ['Cancel', 'OK'],
-                    dangerMode: true,
-
-                })
-            })
-            $(".swal-button--danger").click(function () { });
         });
     </script>
 
