@@ -64,7 +64,7 @@
     }
 
     if(insertReport($name,$datenow,$ipId,findBrgy($location),$subject,$description)  ) {
-       header('Location :https://yol24.herokuapp.com/thankYou.php'); 
+       header('Location:https://yol24.herokuapp.com/thankYou.php'); 
     }
 
     
