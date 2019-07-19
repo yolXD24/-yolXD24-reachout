@@ -2,7 +2,7 @@
 ini_set('display_errors',1);
 define('DB_SERVER', 'remotemysql.com');
 define('DB_USERNAME', 'xVMI2W19dq');
-define('DB_PASSWORD', 'HT6LyFpIV8');
+define('DB_PASSWORD', 'gdxRplaVnU');
 define('DB_NAME', 'xVMI2W19dq');
  
 /* Attempt to connect to MySQL database */
