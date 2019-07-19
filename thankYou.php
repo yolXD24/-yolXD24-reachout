@@ -142,7 +142,7 @@
                         <p class="lead"><strong>You've done a great job.</strong></p>
                         <hr>
                         <p class="lead">
-                            <a class="btn btn-warning btn-sm" href="http://10.0.2.1/Students/leonilojrtorres/reachout/homepageUser.php" role="button">Continue to homepage</a>
+                            <a class="btn btn-warning btn-sm" href="homepageUser.php" role="button">Continue to homepage</a>
                         </p>
                         <p>
                             Having trouble? <a href="">Contact us</a>
