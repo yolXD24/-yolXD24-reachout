@@ -202,7 +202,7 @@
                             <h5>Tabular representation</h5>
 
                             <div id="tableDiv" style="margin-top: 40px">
-                                Table will gentare here.
+                                Table will generate here.
                             </div>
                         </center>
                     </div>
