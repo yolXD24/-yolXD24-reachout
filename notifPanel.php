@@ -54,7 +54,7 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="http://pn-lt04:8081/hackathon/adminPage.php#">Home
+                            <a class="nav-link" href="adminPage.php#">Home
                                 <span class="sr-only">(current)</span>
                             </a>
                         </li>
