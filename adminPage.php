@@ -1,5 +1,9 @@
-<?php
+<?php 
 session_start();
+if ($_SESSION['login'] != true) {
+    header('Location: login.php');
+    exit;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -7,6 +11,7 @@ session_start();
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -107,22 +112,28 @@ session_start();
                         <a class="nav-link" href="#" data-toggle="modal" data-target="#myModal">Admin<span class="badge badge-success">
                             </span>
                         </a>
-                    </li>
-                    <li>
-
-                        <div class="dropdown">
-                            <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Switch Account
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <option class="dropdown-item" value="0">Super Admin</option>
-                                <option class="dropdown-item" value="43">Talamban Admin</option>
-                                <option class="dropdown-item" value="5">Banilad Admin</option>
-                            </div>
+                    <li class="nav-item dropdown no-arrow">
+                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <span class="glyphicon glyphicon-user"></span>
+                        </a>
+                        <?php 
+                            if($_GET['logout']==1) {
+                                session_destroy();
+                                echo '<script>window.location.href = "adminPage.php"</script>';
+                            }
+                            ?>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                            <a class="dropdown-item" href="?logout=1">
+                                Logout</a>
                         </div>
                     </li>
+                    </li>
                 </ul>
+
+                <!-- <ul>
+                    
+                </ul> -->
             </div>
         </div>
     </nav>
@@ -157,7 +168,7 @@ session_start();
         </div>
     </center>
     </div>
-    <script>
+    <!-- <script>
         $(document).ready(function () {
             $('.dropdown-item').on('click', function () {
                 var x = $(this).val();
@@ -178,7 +189,7 @@ session_start();
             });
 
         });
-    </script>
+    </script> -->
 </body>
 
 </html>
