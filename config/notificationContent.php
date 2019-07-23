@@ -4,11 +4,13 @@ ini_set('display_errors',1);
 header("Access-Control-Allow-Origin: *");
 include "config.php";
 $id = $_POST['id']; 
+include 'config/accts.php';
+global $idS;
 $notifContent = array();
 
 $sql = "SELECT Name , Date , BarangayName , DistrictNo ,ReportSubject , ReportContent FROM tblReport r 
         join tblBarangay br on r.IdBarangay = br.IdBarangay join tblDistrict dis on
-        br.IdDistrict = dis.IdDistrict  where r.IdReport ='$id'";
+        br.IdDistrict = dis.IdDistrict  where r.IdReport ='$id' and r.idBarangay = '$idS '";
         $result = $link->query($sql);
         if ($result->num_rows > 0) {                                       
         while ($row = $result->fetch_assoc()) {
