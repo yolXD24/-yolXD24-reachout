@@ -5,7 +5,7 @@ session_start();
 include "config.php";
 include 'accts.php';
 global $idS;
-print($idS);
+// print($idS);
 $sql = "SELECT * FROM tblReport order by Date DESC where idBarangay = '$idS ' or 1 = 1";
 $notifObj = array();
     $result = $link->query($sql);
