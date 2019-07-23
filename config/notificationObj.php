@@ -3,8 +3,10 @@ ini_set('display_errors',1);
 header("Access-Control-Allow-Origin: *");
 session_start();
 include "config.php";
-
-$sql = 'SELECT * FROM tblReport order by Date DESC';
+include 'config/accts.php';
+global $idS;
+print($idS);
+$sql = "SELECT * FROM tblReport order by Date DESC where idBarangay = '$idS '";
 $notifObj = array();
     $result = $link->query($sql);
     if ($result->num_rows > 0) {
