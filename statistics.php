@@ -1,3 +1,10 @@
+<?php 
+session_start();
+if ($_SESSION['login'] != true) {
+    header('Location: login.php');
+    exit;
+}
+?>
 <!DOCTYPE HTML>
 <html>
 
@@ -202,7 +209,7 @@
                             <h5>Tabular representation</h5>
 
                             <div id="tableDiv" style="margin-top: 40px">
-                                Table will generate here.
+                                Table will gentare here.
                             </div>
                         </center>
                     </div>
