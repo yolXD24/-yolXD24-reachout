@@ -4,7 +4,7 @@ ini_set('display_errors',1);
 header("Access-Control-Allow-Origin: *");
 include "config.php";
 $id = $_POST['id']; 
-include 'config/accts.php';
+include 'accts.php';
 global $idS;
 $notifContent = array();
 
