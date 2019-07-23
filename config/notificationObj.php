@@ -1,12 +1,10 @@
 <?php 
-ini_set('display_errors',1);    
-header("Access-Control-Allow-Origin: *");
 session_start();
+// ini_set('display_errors',1);    
+header("Access-Control-Allow-Origin: *");
 include "config.php";
-include 'accts.php';
-global $idS;
-// print($idS);
-$sql = "SELECT * FROM tblReport order by Date DESC where idBarangay = '$idS ' or 1 = 1";
+
+$sql = "SELECT * FROM tblReport where IdBarangay = ".$_SESSION['userlog']." order by Date DESC";
 $notifObj = array();
     $result = $link->query($sql);
     if ($result->num_rows > 0) {
@@ -18,12 +16,15 @@ $notifObj = array();
             $json_array['status'] = (int)$row['status'];      
             array_push($notifObj,$json_array); 
         }
+        // echo  $_SESSION['user'];
+
+        echo json_encode($notifObj,JSON_UNESCAPED_SLASHES); 
     }else{
 
-        echo "There is no Reports recieved at the moment.";
+        echo  '0'. $IDB;
     }
 
-    echo json_encode($notifObj,JSON_UNESCAPED_SLASHES); 
+  
 
 $link->close();
 
