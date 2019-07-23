@@ -6,7 +6,7 @@ include "config.php";
 include 'accts.php';
 global $idS;
 print($idS);
-$sql = "SELECT * FROM tblReport order by Date DESC where idBarangay = '$idS '";
+$sql = "SELECT * FROM tblReport order by Date DESC where idBarangay = '$idS ' or 1 = 1";
 $notifObj = array();
     $result = $link->query($sql);
     if ($result->num_rows > 0) {
