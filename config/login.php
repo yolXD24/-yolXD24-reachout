@@ -1,32 +1,23 @@
 <?php
 session_start();
-ini_set('display_errors', 1);
 require_once "config.php";
-$email = $_POST["email"];
+$username = $_POST["email"];
 $pwd = $_POST["pw"];   
-
-$password = md5($pwd);
-
 $resp = null;
-
-
-$sql1 = "SELECT* from tblAccount where username = $username && password = $password";
+$sql1 = "SELECT * from tblAccount where username = '$username' AND password = '$pwd'";
 $result = $link->query($sql1);
 if ($result->num_rows > 0) {
 
     while ($row = $result->fetch_assoc()) {
-        $_SESSION["ClassNumber"] = $row['ClassNumber'];
         $_SESSION["login"] = true;
-        $_SESSION['userlog'] = 1;
-        $resp  =  $row['Status'];
+        $_SESSION['userlog'] = $row['IdBarangay'];
+        $resp = 1;
     }
 } else {
     $resp = 0;
 }
-if ($resp  == 'True') {
-    $_SESSION["login"] = false;    
-}
-    echo $resp;
+
+echo $resp;
 $link->close();
 
 ?>
