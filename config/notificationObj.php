@@ -3,7 +3,7 @@ ini_set('display_errors',1);
 header("Access-Control-Allow-Origin: *");
 session_start();
 include "config.php";
-include 'config/accts.php';
+include 'accts.php';
 global $idS;
 print($idS);
 $sql = "SELECT * FROM tblReport order by Date DESC where idBarangay = '$idS '";
